@@ -7,7 +7,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
-@ComponentScan(basePackages = {"com.codingjx.springdependencyinjection", "com.codingjx.pets"})
+//@ComponentScan(basePackages = {"com.codingjx.springdependencyinjection", "com.codingjx.pets"})
 @SpringBootApplication
 public class SpringDependencyInjectionApplication {
 
