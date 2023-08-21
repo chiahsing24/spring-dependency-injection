@@ -1,5 +1,6 @@
 package com.codingjx.springdependencyinjection;
 
+import com.codingjx.springdependencyinjection.config.SfgConfiguration;
 import com.codingjx.springdependencyinjection.controller.*;
 import com.codingjx.springdependencyinjection.datasource.FakeDataSource;
 import org.springframework.boot.SpringApplication;
@@ -49,10 +50,19 @@ public class SpringDependencyInjectionApplication {
         System.out.println(constructorInjectedController.getGreeting());
         System.out.println();
 
+        System.out.println("------------ FakeDataSource");
         FakeDataSource fakeDataSource = ctx.getBean(FakeDataSource.class);
         System.out.println(fakeDataSource.getUsername());
         System.out.println(fakeDataSource.getPassword());
         System.out.println(fakeDataSource.getJdbcUrl());
+        System.out.println();
+
+        System.out.println("------------ FakeDataSource Config Props Bean");
+        SfgConfiguration sfgConfiguration = ctx.getBean(SfgConfiguration.class);
+        System.out.println(sfgConfiguration.getUsername());
+        System.out.println(sfgConfiguration.getPassword());
+        System.out.println(sfgConfiguration.getJdbcUrl());
+        System.out.println();
     }
 
 }
