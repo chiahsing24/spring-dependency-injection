@@ -1,6 +1,7 @@
 package com.codingjx.springdependencyinjection;
 
 import com.codingjx.springdependencyinjection.config.SfgConfiguration;
+import com.codingjx.springdependencyinjection.config.SfgConstructorConfig;
 import com.codingjx.springdependencyinjection.controller.*;
 import com.codingjx.springdependencyinjection.datasource.FakeDataSource;
 import org.springframework.boot.SpringApplication;
@@ -63,6 +64,15 @@ public class SpringDependencyInjectionApplication {
         System.out.println(sfgConfiguration.getPassword());
         System.out.println(sfgConfiguration.getJdbcUrl());
         System.out.println();
+
+        System.out.println("------------ FakeDataSource Constructor Config Binding");
+        SfgConstructorConfig sfgConstructorConfig = ctx.getBean(SfgConstructorConfig.class);
+        System.out.println(sfgConstructorConfig.getUsername());
+        System.out.println(sfgConstructorConfig.getPassword());
+        System.out.println(sfgConstructorConfig.getJdbcUrl());
+        System.out.println();
+
+
     }
 
 }

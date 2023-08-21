@@ -7,9 +7,11 @@ import com.codingjx.springdependencyinjection.repository.EnglishGreetingReposito
 import com.codingjx.springdependencyinjection.repository.EnglishGreetingRepositoryImpl;
 import com.codingjx.springdependencyinjection.service.*;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.context.annotation.*;
 
 //@PropertySource("classpath:datasource.properties")
+@EnableConfigurationProperties(SfgConstructorConfig.class)
 @ImportResource("classpath:di-config.xml")
 @Configuration
 public class GreetingServiceConfig {
